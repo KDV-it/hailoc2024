@@ -39,7 +39,7 @@ function App() {
           src="/img/icon1.png"
           alt="logo"
         />
-        <img className="ss:w-auto ss:h-[100%]" src="/img/textTMT.png" alt="" />
+        <img className="ss:h-[100%] ss:w-auto " src="/img/textTMT.png" alt="" />
       </div>
       <div className="ss:w-[80vw] ss:h-[60vh] flex justify-start items-center flex-col mb-10">
         <div
