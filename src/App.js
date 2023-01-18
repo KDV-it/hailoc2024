@@ -66,7 +66,7 @@ function App() {
           
         >
           <img id="LoiChua" src={urlLC} alt="" 
-            className="h-5/6 w-auto"
+            className="lg:h-5/6 lg:w-auto ss:w-full ss:h-auto"
           />
           <div onClick={handleDownload} 
             className="w-28 h-10 flex justify-center items-center mt-10 hover:cursor-pointer border-2 border-gray-500 rounded-xl"
