@@ -5,7 +5,7 @@ import { FcDownload } from "react-icons/fc";
 
 function App() {
   const [isHidden, setHidden] = useState(false);
-  const [urlLC, setUrlLC] = useState("/img/loiChua/LC01.jpg");
+  const [urlLC, setUrlLC] = useState("");
 
   const handleOnClick = () => {
     let random = Math.floor(Math.random() * 20);
