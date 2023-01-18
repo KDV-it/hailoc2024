@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import html2canvas from 'html2canvas'
+import html2canvas from "html2canvas";
+import { FcDownload } from "react-icons/fc";
 
 function App() {
   const [isHidden, setHidden] = useState(false);
@@ -16,17 +17,17 @@ function App() {
   };
 
   const handleDownload = () => {
-    const screenshortTarget = document.getElementById('LoiChua');
+    const screenshortTarget = document.getElementById("LoiChua");
 
     html2canvas(screenshortTarget).then((canvas) => {
       const base64image = canvas.toDataURL("image/png");
-      var anchor = document.createElement('a');
+      var anchor = document.createElement("a");
       anchor.setAttribute("href", base64image);
       anchor.setAttribute("download", "LoiChua2023.png");
       anchor.click();
       anchor.remove();
-    })
-  }
+    });
+  };
   return (
     <div className="w-screen h-screen lg:bg-pc lg:bg-cover lg:bg-no-repeat ss:bg-mb ss:bg-cover ss:bg-no-repeat flex flex-col justify-around items-center lg:pt-10 ss:pt-32">
       <div
@@ -39,7 +40,11 @@ function App() {
           src="/img/icon1.png"
           alt="logo"
         />
-        <img className="ss:h-[100%] ss:w-auto " src="/img/TextTMT.png" alt="title tmt" />
+        <img
+          className="ss:h-[100%] ss:w-auto "
+          src="/img/TextTMT.png"
+          alt="title tmt"
+        />
       </div>
       <div className="ss:w-[80vw] ss:h-[60vh] flex justify-start items-center flex-col mb-10">
         <div
@@ -52,10 +57,22 @@ function App() {
         >
           HÁI LỘC
         </div>
-        <div className={isHidden?"visible w-full h-full mb-10 hover:cursor-pointer hover:bg-[#ffffff2f]" : "invisible"} 
-          onClick={handleDownload}
+        <div
+          className={
+            isHidden
+              ? "visible w-full h-full mb-10  flex flex-col justify-start items-center"
+              : "invisible"
+          }
+          
         >
-          <img id="LoiChua" src={urlLC} alt="" />
+          <img id="LoiChua" src={urlLC} alt="" 
+            className="h-5/6 w-auto"
+          />
+          <div onClick={handleDownload} 
+            className="w-28 h-10 flex justify-center items-center mt-10 hover:cursor-pointer border-2 border-gray-500 rounded-xl"
+          >
+            <FcDownload className="w-auto h-9"/>
+          </div>
         </div>
       </div>
     </div>
