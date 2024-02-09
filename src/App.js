@@ -11,7 +11,7 @@ function App() {
     let random = Math.floor(Math.random() * 20);
     if (random === 0) random += 1;
     console.log("random", random);
-    if (random < 10) setUrlLC(`/img/loiChua/LC0${random}.jpg`);
+    if (random < 10) setUrlLC(`/img/loiChua/LC0${random}.png`);
     else setUrlLC(`/img/loiChua/LC${random}.jpg`);
     setHidden(!isHidden);
   };
