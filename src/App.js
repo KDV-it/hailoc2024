@@ -12,7 +12,7 @@ function App() {
     if (random === 0) random += 1;
     console.log("random", random);
     if (random < 10) setUrlLC(`/img/loiChua/LC0${random}.png`);
-    else setUrlLC(`/img/loiChua/LC${random}.jpg`);
+    else setUrlLC(`/img/loiChua/LC${random}.png`);
     setHidden(!isHidden);
   };
 
